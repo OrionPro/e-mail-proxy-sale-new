@@ -1,0 +1,368 @@
+/* =============================================================================
+   MAIN
+   ========================================================================== */
+
+/**
+ * This is main SCSS file. We import every partial into this file. Do not remove
+ * partials if you don't need them, comment them out instead.
+ */
+
+/* Charset
+   ========================================================================== */
+
+@charset "UTF-8";
+
+/* Partials
+   ========================================================================== */
+@import 'settings';
+@import 'reset';
+@import 'page';
+@import 'images';
+@import 'typography';
+@import 'table';
+@import 'grid';
+@import 'preheader';
+@import 'buttons';
+@import 'hero';
+@import 'utilities';
+
+
+.main-wrapper__inner {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.header {
+	padding-bottom: 30px;
+}
+
+.header-wrap {
+	font-size: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #c3c3c3;
+}
+
+.header-logo {
+	width: 50%;
+	display: inline-block;
+	position: relative;
+
+	a {
+		display: inline-block;
+
+		img {
+			vertical-align: middle;
+		}
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		width: 100% !important;
+	}
+}
+
+.header-logo__divider {
+	width: 1px;
+	height: 33px;
+	position: absolute;
+	top: calc(50% - 18px);
+	right: 0;
+	background-color: rgb(195, 195, 195);
+
+	@media (max-width: $breakpoint-mobile) {
+		display: none;
+	}
+}
+
+.header-nav {
+	width: 50%;
+	display: inline-block;
+
+	@media (max-width: $breakpoint-mobile) {
+		width: 100% !important;
+		margin-top: 10px;
+	}
+
+	ul {
+		line-height: 30px;
+		padding: 0 0 0 30px;
+		margin: 0;
+
+		@media (max-width: $breakpoint-mobile) {
+			padding: 0 !important;
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 50px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			a {
+				font-size: 18px;
+				color: $main-title-color;
+			}
+
+			@media (max-width: 360px) {
+				display: block !important;
+				margin-right: 0 !important;
+			}
+		}
+	}
+}
+
+.Links-to-forums-proxy-sale {
+	font-size: 0;
+	margin-bottom: 45px;
+}
+
+.Links-to-forums-proxy-sale__item {
+	font-size: 18px;
+	font-weight: bolder;
+
+	@media (max-width: 500px) {
+		width: 100% !important;
+		font-size: 18px !important;
+	}
+
+	a {
+		color: #20282a;
+		text-decoration: underline;
+	}
+}
+
+.Links-to-forums-proxy-seller {
+	width: 480px;
+	margin: auto;
+	font-size: 20px;
+
+	@media (max-width: 500px) {
+		width: 100% !important;
+	}
+
+	a {
+		display: inline-block;
+		margin-bottom: 10px;
+		color: $main-txt-color;
+		text-decoration: underline;
+	}
+
+	span {
+		display: inline-block;
+	}
+}
+
+.title {
+	margin: 0;
+	font-size: 22px;
+	font-weight: bold;
+	color: $main-txt-color;
+
+	img {
+		margin-right: 19px;
+		vertical-align: middle;
+	}
+
+	&.mt {
+		margin-top: 40px;
+	}
+
+	&.no-br {
+		@media (max-width: 500px) {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+.order-was-successfully-issued-ul {
+	margin-top: 40px;
+	padding: 0;
+
+	&.proxysale-ul {
+		margin-top: 20px;
+		margin-bottom: 55px;
+
+		li {
+			margin-bottom: 0;
+		}
+	}
+
+	&.m-o {
+		margin: 0 0 40px 0;
+
+		li {
+			margin-bottom: 0;
+		}
+	}
+
+	&.fz-16 {
+		li {
+			font-size: 16px;
+		}
+	}
+
+	&.fz-20 {
+		li {
+			font-size: 20px;
+		}
+	}
+
+	&.welcome-letter-seller-ul {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	li {
+		margin-bottom: 20px;
+		list-style: none;
+		font-size: 18px;
+		color: $main-txt-color;
+	}
+
+	span {
+		font-weight: bold;
+	}
+}
+
+.left-decor {
+	width: 5px;
+	height: 60px;
+	margin-top: 4px;
+	margin-right: 16px;
+	float: left;
+	background-color: $main-color;
+}
+
+p {
+	font-size: 16px;
+	color: $main-txt-color;
+
+	&.decor {
+		margin-top: 0;
+	}
+
+	&.survey-proxysale {
+		margin-top: -120px;
+
+		@media (max-width: 500px) {
+			margin-top: -60px !important;
+		}
+	}
+
+	&.lk {
+		font-size: 16px;
+	}
+
+	&.mt-txt {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	&.fz-18 {
+		font-size: 18px;
+	}
+
+	&.fz-19 {
+		font-size: 19px;
+	}
+
+	&.fz-20 {
+		font-size: 20px;
+	}
+
+	&.fz-21 {
+		font-size: 21px;
+	}
+
+	&.fz-22 {
+		font-size: 22px;
+	}
+
+	&.fz-26 {
+		font-size: 26px;
+	}
+
+	&.mt-txt-40 {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	&.mb-txt-10 {
+		margin-bottom: 10px;
+	}
+
+	&.mb-txt-5 {
+		margin-bottom: 5px;
+	}
+
+	&.mb-big {
+		margin-bottom: 50px;
+	}
+
+	&.mb-0 {
+		margin-bottom: 0;
+	}
+
+	&.mb-mid {
+		margin-bottom: 30px;
+	}
+
+	&.color-orange {
+		color: $main-color2;
+	}
+
+	a {
+		color: $main-color;
+	}
+}
+
+.footer {
+	padding-top: 35px;
+	padding-bottom: 40px;
+	vertical-align: top;
+}
+
+.footer-spacer {
+	border-top: 2px solid #c3c3c3;
+}
+
+.footer-list {
+	margin-bottom: 0;
+	margin-top: 10px;
+
+	i {
+		display: inline-block;
+		vertical-align: middle !important;
+		margin-right: 5px;
+
+		img {
+			display: inline-block;
+			vertical-align: middle !important;
+		}
+	}
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	a {
+		vertical-align: middle;
+	}
+}
+
+.footer-bot {
+	padding-bottom: 40px;
+	font-size: 12px;
+	color: #20282a;
+	line-height: 1;
+}
