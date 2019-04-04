@@ -71,6 +71,8 @@
 	position: absolute;
 	top: calc(50% - 18px);
 	right: 0;
+	font-size: 0;
+	color: transparent;
 	background-color: rgb(195, 195, 195);
 
 	@media (max-width: $breakpoint-mobile) {
@@ -175,6 +177,16 @@
 		text-decoration: none;
 		text-align: center;
 		box-shadow: 0px 1px 15.2px 3.8px rgba(33, 33, 33, 0.17);
+	}
+
+	&.w-300 {
+		a {
+			width: 300px;
+
+			@media (max-width: 500px) {
+				width: 270px !important;
+			}
+		}
 	}
 }
 
@@ -305,8 +317,12 @@ p {
 		}
 	}
 
-	&.lk {
-		font-size: 16px;
+	&.bold {
+		font-weight: bold;
+	}
+
+	&.bolder {
+		font-weight: bolder;
 	}
 
 	&.mt-txt {
@@ -373,13 +389,55 @@ p {
 
 	a {
 		color: $main-color;
+		text-decoration: underline;
 	}
+}
+
+.weekly-digest-items {
+	padding: 0;
+	margin: 0;
+
+	a.main-color {
+		color: $main-color;
+		font-weight: bold;
+		font-size: 18px;
+		text-decoration: none;
+	}
+
+	p {
+		margin-top: 5px;
+		font-size: 16px;
+	}
+
+	a.main-txt-color {
+		font-size: 18px;
+		color: $main-txt-color;
+		text-decoration: underline;
+	}
+
+	img {
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+
+	li {
+		margin-bottom: 35px;
+		list-style: none;
+	}
+}
+
+.bolder {
+	font-weight: bolder;
 }
 
 .footer {
 	padding-top: 35px;
 	padding-bottom: 40px;
 	vertical-align: top;
+
+	.title {
+		margin-bottom: 10px;
+	}
 }
 
 .footer-spacer {
@@ -393,7 +451,7 @@ p {
 	i {
 		display: inline-block;
 		vertical-align: middle !important;
-		margin-right: 5px;
+		margin-right: 10px;
 
 		img {
 			display: inline-block;
